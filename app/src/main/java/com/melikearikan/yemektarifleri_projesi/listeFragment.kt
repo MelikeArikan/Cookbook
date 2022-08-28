@@ -16,7 +16,7 @@ import kotlin.collections.ArrayList
 
 class listeFragment : Fragment() {
 
-    // recyclerView içerisinde veri gösterebilmek için veri tabanındaki verileri listelere koyucaz.
+
 
     var yemekİsmiListesi = ArrayList<String>()
     var yemekIdListesi = ArrayList<Int>()
@@ -56,7 +56,7 @@ class listeFragment : Fragment() {
                 val yemekIsmiIndex = cursor.getColumnIndex("yemekismi")
                 val yemekIndIndex = cursor.getColumnIndex("id")
 
-                yemekİsmiListesi.clear() // öceden kalan bir şey varsa diye yemeklistesinin temizliyoruz.
+                yemekİsmiListesi.clear()
                 yemekIdListesi.clear()
 
                 while (cursor.moveToNext()){
@@ -64,8 +64,7 @@ class listeFragment : Fragment() {
                     yemekİsmiListesi.add(cursor.getString(yemekIsmiIndex))
                     yemekIdListesi.add(cursor.getInt(yemekIndIndex))
                 }
-                listeAdapter.notifyDataSetChanged()  //kullanıcılar yeni yemek de eklicek haliyle veriler değişicek bu kod yeni bir veri geldiğini listeye söylicek ve recyclerView güncellenicek
-
+                listeAdapter.notifyDataSetChanged()
                 cursor.close()
 
             }
