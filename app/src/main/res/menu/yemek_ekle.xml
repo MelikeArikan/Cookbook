@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/yemek_ekleme_item" android:title="yemek ekle"> </item>
+</menu>
+
+<!-- item menudeki tek bir tıklanan yer,bundan istediğim kadar koyabilirim menüme
+*_ id eklemek zorundasın, yazdığın title menünün içinde yazılıcak yazıdır.
+*_ biz bu menüyü aktıivity'e ekleriz fragmentlarla bir alakası yok.-->
