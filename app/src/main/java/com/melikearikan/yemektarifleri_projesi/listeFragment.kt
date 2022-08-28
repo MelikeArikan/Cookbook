@@ -16,12 +16,9 @@ import kotlin.collections.ArrayList
 
 class listeFragment : Fragment() {
 
-
-
     var yemekİsmiListesi = ArrayList<String>()
     var yemekIdListesi = ArrayList<Int>()
     private lateinit var listeAdapter : listeRecyclerAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,9 +40,6 @@ class listeFragment : Fragment() {
         recycler_view.layoutManager = LinearLayoutManager(context)
         recycler_view.adapter = listeAdapter
         sqlVeriAlma()
-
-
-
     }
 
     fun sqlVeriAlma(){
@@ -66,22 +60,12 @@ class listeFragment : Fragment() {
                 }
                 listeAdapter.notifyDataSetChanged()
                 cursor.close()
-
             }
-
         }catch (e: Exception){
             e.printStackTrace()
 
-
         }
     }
-
-
-
-
-
-
-
 
     }
 
